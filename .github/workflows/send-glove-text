@@ -1,0 +1,21 @@
+name: send-glove-text
+run-name: Sending a reminder to put gloves on to ${{ github.actor }}
+on:
+  schedule:
+    - cron: "30 7 * * *"
+jobs:
+  morning-temperature-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run script
+        run: |
+          python script.py
