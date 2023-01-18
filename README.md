@@ -2,7 +2,7 @@
 
 > I'm cold
 
-![Alt Text](https://media.giphy.com/media/3o7ZeCHGCq8vJgj4GY/giphy.gif)
+![John Candy and Steve Martin freezing in the cold in the movie Planes Trains and Automobiles](https://media.giphy.com/media/3o7ZeCHGCq8vJgj4GY/giphy.gif)
 
 ## What Is This?
 
