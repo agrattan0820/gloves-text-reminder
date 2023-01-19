@@ -6,7 +6,7 @@
 
 ## What Is This?
 
-This is a small personal script that runs every morning at 7:30am to let me know whether I should put on my winter gloves or not.
+This is a small personal script that runs every morning at 7:30am EST to let me know whether I should put on my winter gloves or not.
 
 ## Why?
 

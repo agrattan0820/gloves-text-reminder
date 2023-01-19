@@ -2,7 +2,7 @@ name: send-glove-text
 run-name: Sending a reminder to put gloves on to ${{ github.actor }}
 on:
   schedule:
-    - cron: "30 7 * * *"
+    - cron: "30 12 * * *"
 
 jobs:
   morning-temperature-check:
