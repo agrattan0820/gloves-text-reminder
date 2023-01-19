@@ -4,14 +4,6 @@ on:
   schedule:
     - cron: "30 7 * * *"
 
-env:
-  WEATHERSTACK_API_KEY: ${{ secrets.WEATHERSTACK_API_KEY }}
-  WEATHERSTACK_QUERY: ${{ secrets.WEATHERSTACK_QUERY }}
-  SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-  EMAIL: ${{ secrets.EMAIL }}
-  PASSWORD: ${{ secrets.PASSWORD }}
-  SMS_GATEWAY: ${{ secrets.SMS_GATEWAY }}
-
 jobs:
   morning-temperature-check:
     runs-on: ubuntu-latest
@@ -26,5 +18,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run script
+        env:
+          WEATHERSTACK_API_KEY: ${{ secrets.WEATHERSTACK_API_KEY }}
+          WEATHERSTACK_QUERY: ${{ secrets.WEATHERSTACK_QUERY }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          SMS_GATEWAY: ${{ secrets.SMS_GATEWAY }}
         run: |
           python script.py
