@@ -45,8 +45,8 @@ def sendGlovesText(weather_data):
     msg = MIMEMultipart()
     msg['From'] = email
     msg['To'] = sms_gateway
-    msg['Subject'] = "It's cold: %s%s" % (
-        weather_data['current']['temperature'], chr(176))
+    msg['Subject'] = "It's cold: %s" % (
+        weather_data['current']['temperature'])
     body = "Put on your gloves!\n"
     msg.attach(MIMEText(body, 'plain'))
 
